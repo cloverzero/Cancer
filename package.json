@@ -1,0 +1,15 @@
+{
+  "name": "cancer",
+  "version": "1.0.0",
+  "description": "web page builder",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lurker",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  }
+}

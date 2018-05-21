@@ -169,6 +169,7 @@
   },
   "dependencies": {
     "devtron": "^1.4.0",
+    "draft-js": "^0.10.5",
     "electron-debug": "^1.5.0",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",

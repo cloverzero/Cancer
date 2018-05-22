@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Editor, EditorState } from 'draft-js';
 import 'draft-js/dist/Draft.css';
-import styles from './PageEditor.css';
+import './PageEditor.css';
 
 
 export default class PageEditor extends Component {
@@ -13,7 +13,7 @@ export default class PageEditor extends Component {
 
   render() {
     return (
-      <div className={styles["page-editor-root"]}>
+      <div className="page-editor-root">
         <Editor editorState={this.state.editorState} onChange={this.onChange}/>
       </div>
     );

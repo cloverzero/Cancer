@@ -47,13 +47,7 @@ export default merge.smart(baseConfig, {
         test: /^((?!(\.global)|(Draft)).)*\.css$/,
         use: ExtractTextPlugin.extract({
           use: {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              minimize: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]__[hash:base64:5]',
-            }
+            loader: 'css-loader'
           }
         }),
       },
@@ -80,13 +74,7 @@ export default merge.smart(baseConfig, {
         test: /^((?!\.global).)*\.(scss|sass)$/,
         use: ExtractTextPlugin.extract({
           use: [{
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              minimize: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]__[hash:base64:5]',
-            }
+            loader: 'css-loader'
           },
           {
             loader: 'sass-loader'

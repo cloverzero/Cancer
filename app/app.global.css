@@ -5,38 +5,19 @@
 @import "~font-awesome/css/font-awesome.css";
 
 body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background: #232c39 linear-gradient(45deg, rgba(0, 216, 255, 0.5) 10%, rgba(0, 1, 127, 0.7));
-}
-
-h2 {
   margin: 0;
-  font-size: 2.25rem;
-  font-weight: bold;
-  letter-spacing: -0.025em;
-  color: #fff;
+  padding: 0;
+  color: #CBCCCB;
+  background: #1E1E1E;
+  font-size: 14px;
 }
 
-p {
-  font-size: 24px;
+.ant-layout {
+  background: #1E1E1E;
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  color: white;
-  opacity: 0.75;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-  cursor: pointer;
+.ant-layout-sider {
+  background: #333333;
 }
 
 .flex-row {

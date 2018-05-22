@@ -1,14 +1,36 @@
 .container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.title-bar {
+  height: 22px;
   text-align: center;
+  line-height: 22px;
+  color: #CBCCCB;
+  background: #3c3c3c;
+  user-select: none;
+  -webkit-app-region: drag;
 }
 
-.container h2 {
-  font-size: 5rem;
+.workbench {
+  flex: 1;
 }
 
-.container a {
-  font-size: 1.4rem;
+.toolbar {
+  padding: 8px;
+  background: #252526;
+}
+
+.playground {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

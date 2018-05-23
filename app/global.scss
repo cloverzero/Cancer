@@ -24,12 +24,27 @@ body {
   display: flex;
 }
 
-.flex-row .left {}
-
 .grid-row {
   display: flex;
+
+  > * {
+    flex: 1;
+  }
 }
 
-.grid-row > * {
-  flex: 1;
+.panel {
+  > header {
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 1em;
+    background: #383838;
+  }
+
+  > section {
+    padding: 15px;
+  }
+}
+
+.ant-btn > .fa {
+  vertical-align: text-top;
 }

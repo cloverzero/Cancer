@@ -30,7 +30,10 @@
 
 .editor-container {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px 0;
+  overflow: scroll;
+}
+
+.tool-sidebar {
+  width: 400px;
 }

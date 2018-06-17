@@ -1,8 +1,8 @@
-import './TextPanel.css';
+import './TextPanel.scss';
 
 import React, { Component } from 'react';
 import { RichUtils } from 'draft-js';
-import { CompactPicker } from 'react-color';
+import { BlockPicker } from 'react-color';
 
 import { Button, Layout, Select } from 'antd';
 
@@ -12,9 +12,27 @@ const { Header, Footer, Sider, Content } = Layout;
 
 export default class TextPanel extends Component {
 
-  bold() {
+  state = {
+    displayColorPicker: false,
+    color: {
+      r: '241',
+      g: '112',
+      b: '19',
+      a: '1',
+    },
+  };
+
+  toggleColorPicker = () => {
+    this.setState({ displayColorPicker: !this.state.displayColorPicker })
+  };
+
+  closeColorPicker = () => {
+    this.setState({ displayColorPicker: false })
+  };
+
+  bold = () => {
     this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'BOLD'));
-  }
+  };
 
   render() {
     return (
@@ -28,7 +46,7 @@ export default class TextPanel extends Component {
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button size="small" onClick={this.bold.bind(this)}><i className="fa fa-bold"/></Button>
+            <Button size="small" onClick={this.bold}><i className="fa fa-bold"/></Button>
             <Button size="small"><i className="fa fa-italic"/></Button>
             <Button size="small"><i className="fa fa-underline"/></Button>
           </ButtonGroup>
@@ -38,7 +56,13 @@ export default class TextPanel extends Component {
               <Button size="small"><i className="fa fa-link"/></Button>
               <Button size="small"><i className="fa fa-font"/></Button>
             </ButtonGroup>
-            <CompactPicker />
+
+            <div className="color-swatch" onClick={this.toggleColorPicker}><div style={{background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`}}></div></div>
+            { this.state.displayColorPicker ? <div>
+              <div/>
+              <BlockPicker />
+            </div> : null }
+
           </div>
         </section>
       </div>

@@ -9,6 +9,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 import PageEditor from "./PageEditor";
 import TextPanel from "./text-panel/TextPanel";
+import TextPanelContainer  from "../containers/TextPanelContainer";
 
 
 export default class Home extends Component<Props> {
@@ -36,7 +37,8 @@ export default class Home extends Component<Props> {
             </div>
           </Content>
           <Sider width={250}>
-            <TextPanel editorState={this.props.editorState} onChange={this.props.onChange} />
+            {/*<TextPanel editorState={this.props.editorState} onChange={this.props.onChange} />*/}
+            <TextPanelContainer/>
           </Sider>
         </Layout>
         <Footer className="status-bar">Success</Footer>

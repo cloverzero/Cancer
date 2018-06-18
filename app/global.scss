@@ -2,7 +2,7 @@
  * @NOTE: Prepend a `~` to css file paths that are in your node_modules
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
-@import "~font-awesome/css/font-awesome.css";
+@import "./assets/icons/iconfont.css";
 
 body {
   margin: 0;
@@ -51,4 +51,12 @@ body {
 
 .ant-btn-group {
   margin-right: 8px;
+}
+
+.popup-cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

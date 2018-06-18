@@ -1,14 +1,3 @@
-.color-swatch {
-  display: inline-block;
-  padding: 5px;
-  border-radius: 1px;
-  background: #fff;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
-  cursor: pointer;
-
-  > div {
-    width: 36px;
-    height: 14px;
-    border-radius: 2px;
-  }
+.panel .ant-btn-group > .ant-btn {
+  line-height: 1.5;
 }

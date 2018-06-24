@@ -10,9 +10,6 @@ export default class ColorButton extends Component {
     displayColorPicker: false
   };
 
-
-
-
   toggleColorPicker = (e) => {
     e.preventDefault();
     this.setState({ displayColorPicker: !this.state.displayColorPicker })
@@ -20,7 +17,6 @@ export default class ColorButton extends Component {
 
   closeColorPicker = (e) => {
     if (e) {
-      console.log(e);
       e.preventDefault();
     }
     this.setState({ displayColorPicker: false })
@@ -47,7 +43,7 @@ export default class ColorButton extends Component {
           <div
             style={{ background: color }}/>
         </div>
-        {this.state.displayColorPicker ? <div className="color-picker-cnt">
+        {this.state.displayColorPicker ? <div className="color-picker-cnt" onMouseDown={e => e.preventDefault()}>
           <div className="popup-cover" onMouseDown={this.closeColorPicker}/>
           <BlockPicker color={color} colors={Object.values(colorStyleMap).map(item => item.color)} onChange={this.changeColor}/>
         </div> : null}

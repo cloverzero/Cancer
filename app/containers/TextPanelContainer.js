@@ -10,6 +10,7 @@ function mapStateToProps(state) {
   const currentStyle = state.editor.getCurrentInlineStyle();
   const colorArray = Object.keys(colorStyleMap).filter(color => currentStyle.has(color));
   return {
+    style: currentStyle,
     color: colorArray[0],
     editorState: state.editor
   };
